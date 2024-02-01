@@ -6,7 +6,7 @@
 /*   By: pmira-pe <pmira-pe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 01:13:44 by pmira-pe          #+#    #+#             */
-/*   Updated: 2021/12/10 21:48:18 by pmira-pe         ###   ########.fr       */
+/*   Updated: 2024/02/01 19:49:39 by pmira-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ static void	eating(t_philo *philo)
 
 static void	sleeping(t_philo *philo)
 {
-	usleep(25);
 	if (philo->param->sleep_time
 		>= (philo->param->die_time - philo->param->eat_time))
 	{
@@ -86,7 +85,6 @@ static void	sleeping(t_philo *philo)
 
 void	thinking(t_philo *philo)
 {
-	usleep(35);
 	still_alive(philo);
 	if (!philo->param->anybody_died)
 		printf("\033[0;33m%ums %d is thinking\n\033[0m",
